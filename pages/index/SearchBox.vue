@@ -34,7 +34,10 @@
             v-if="loading"
             class="action-btn reset"
             type="button"
-            @click="$emit('reset')"
+            @click="
+              $emit('update:modelValue', '');
+              $emit('reset');
+            "
             @touchstart="handleTouchStart"
             @touchend="handleTouchEnd"
             title="重置搜索">
